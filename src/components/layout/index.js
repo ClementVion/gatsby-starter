@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header/index.js"
+import Scroll from "../scroll"
 
 import "./index.scss"
 
@@ -27,10 +28,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div>
-        <main>{children}</main>
-        <footer></footer>
-      </div>
+				<Scroll>
+      		<div className="Layout">
+        		<main>{children}</main>
+        		<footer></footer>
+      		</div>
+			</Scroll>
     </>
   )
 }
