@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+// Layout functions & mixins
+@function cols($colsNumber: 1, $guttersNumber: $colsNumber - 1) {
+	@return ($colWidth * $colsNumber) + ($gutterWidth * $guttersNumber);
+}
+
+@mixin layout {
+	width: cols(16);
+	margin: auto;
+}
+
+// Ratio px to vw
+@function ratio($multiplier: 1) {
+	@return ($baseSize * $multiplier);
+}

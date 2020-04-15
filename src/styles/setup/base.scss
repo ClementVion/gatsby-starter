@@ -1,0 +1,11 @@
+@import 'src/styles/shared/variables.scss';
+
+html, body {
+	overflow: hidden;
+}
+
+body {
+	font-family: $mainFont;
+	background-color: $white;
+	-webkit-font-smoothing: antialiased;
+}
